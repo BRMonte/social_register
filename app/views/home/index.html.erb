@@ -1,0 +1,7 @@
+Hello &lt;%= current_user.email %&gt;
+&lt;% if current_user.image.present? %&gt;
+&lt;%= image_tag(current_user.image, size: "40") %&gt;
+&lt;% end %&gt;
+
+<%= link_to “Sair”, destroy_user_session_path, method: :delete %>
+
